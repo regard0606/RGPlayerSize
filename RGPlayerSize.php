@@ -50,6 +50,10 @@ if ($args[1]<=0) {
 	$sender->sendMessage('§l[ §e서버§f ] §r§l크기는 0이하가 될 수 없습니다');
 	return true;
 	}
+if(!is_numeric($args[1])) {
+	$sender->sendMessage('§l[ §e서버§f ] §r§l크기는 숫자로 입력해주세요');
+	return true;
+	}
 $target = $this->getServer()->getPlayer($args[0]);
 if (! $target instanceof Player){
 	$sender->sendMessage('§l[ §e서버§f ] §r§l존재하지 않는 플레이어입니다');
